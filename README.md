@@ -19,16 +19,17 @@ https://hub.docker.com
 - Double-click Docker.app in the Applications folder to start Docker. You are prompted to authorize Docker.app with your system password after you launch it. Privileged access is needed to install networking components and links to the Docker apps.
 - The Docker menu in the top status bar indicates that Docker Desktop is running, and accessible from a terminal.
 - Once you are done installing Docker, test your Docker installation by running the following Docker hello-world image:
-``` $ docker run hello-world
-    Unable to find image 'hello-world:latest' locally
-    latest: Pulling from library/hello-world
-    03f4658f8b78: Pull complete
-    Digest: sha256:8be990ef2aeb16dbcb9271ddfe2610fa6658d13f6dfb8bc72074cc1ca36966a7
-    Status: Downloaded newer image for hello-world:latest
+``` 
+$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+03f4658f8b78: Pull complete
+Digest: sha256:8be990ef2aeb16dbcb9271ddfe2610fa6658d13f6dfb8bc72074cc1ca36966a7
+Status: Downloaded newer image for hello-world:latest
 	
-    Hello from Docker.
-    This message shows that your installation appears to be working correctly.
-   	...
+Hello from Docker.
+This message shows that your installation appears to be working correctly.
+...
 ```
     
 ### 4.	Get started with Docker Desktop for Mac
