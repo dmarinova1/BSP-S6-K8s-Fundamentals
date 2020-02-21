@@ -2,7 +2,7 @@
 This is a Bachelor Semester Project on "Containerisation of services" with domains on Cloud Computing, Docker, Kubernetes
 
 # **Docker Tutorial**
-This tutorial was built using [JavaCodeGeeksDockerHWExample](https://examples.javacodegeeks.com/devops/docker/docker-hello-world-example/) and [DockerMacDocs](https://docs.docker.com/docker-for-mac/)
+This tutorial was built using [Java Code Geeks Docker Hello World Example](https://examples.javacodegeeks.com/devops/docker/docker-hello-world-example/) and [Docker for Mac Docs](https://docs.docker.com/docker-for-mac/)
 
 ## Objectives:
 The objectives are:
@@ -15,10 +15,10 @@ The objectives are:
 https://hub.docker.com
 ### 2.	Download Docker Desktop for the system you are operating on (Windows, macOS, etc.) 
 ### 3.	Install Docker Desktop.
-  a.	Double-click Docker.dmg to open the installer, drag the Docker icon to the Applications folder.
-  b.	Double-click Docker.app in the Applications folder to start Docker. You are prompted to authorize Docker.app with your system password after you launch it. Privileged access is needed to install networking components and links to the Docker apps.
-The Docker menu in the top status bar indicates that Docker Desktop is running, and accessible from a terminal.
-c.	Once you are done installing Docker, test your Docker installation by running the following Docker hello-world image:
+- Double-click Docker.dmg to open the installer, drag the Docker icon to the Applications folder.
+- Double-click Docker.app in the Applications folder to start Docker. You are prompted to authorize Docker.app with your system password after you launch it. Privileged access is needed to install networking components and links to the Docker apps.
+- The Docker menu in the top status bar indicates that Docker Desktop is running, and accessible from a terminal.
+- Once you are done installing Docker, test your Docker installation by running the following Docker hello-world image:
 ``` $ docker run hello-world
     Unable to find image 'hello-world:latest' locally
     latest: Pulling from library/hello-world
@@ -32,8 +32,7 @@ c.	Once you are done installing Docker, test your Docker installation by running
 ```
     
 ### 4.	Get started with Docker Desktop for Mac
-   a.	Running our first “Hello World” container
-We are going to run an Alpine Linux container (a lightweight linux distribution) on our system. We run the following in our terminal:
+- Running our first “Hello World” container using an Alpine Linux container (a lightweight linux distribution) on our system. We run the following in our terminal:
 ```$ docker pull alpine```
 The pull command fetches the alpine image from the Docker registry and saves it in our system. We can use the docker images command to see a list of all images on your system.
 ```$ docker images```
@@ -55,7 +54,8 @@ When we run $ docker run alpine with command (ls -l), Docker starts the specifie
 
 ### 5. Get a “Hello, world” Printed from Another Basic Docker Image:
 1)
-```$ docker run alpine echo "hello from alpine"
+```
+$ docker run alpine echo "hello from alpine"
 hello from alpine
 ```
 
@@ -68,7 +68,8 @@ The second command downloads the Alpine baseimage the first time and creates a D
 
 Using the docker ps command we can see all containers that are currently running.
 
-```$ docker ps
+```
+$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 Since no containers are running there is a blank line. A more useful variant: 
@@ -85,7 +86,8 @@ To find out more about run command, we can use docker run --help to see a list o
 ### 7. Create HelloWorld.java
 
 First, we create a simple Java program that prints “Hello, World” (a program very closely resembling the one provided in the Official Java tutorial).  Open up any text editor and enter the following code:
-```	public class HelloWorld {
+```	
+public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World");
     }
@@ -93,7 +95,7 @@ First, we create a simple Java program that prints “Hello, World” (a program
 ```
 - Save the file as HelloWorld.java.  
 - compile this file using the Java compiler to create the class file Helloworld.class
-```	$ javac HelloWorld.java```
+```$ javac HelloWorld.java```
 To execute the Hello World with Java:
 ![JavaExecuteHelloWorld](javac-hw.png)
 
@@ -112,7 +114,8 @@ We shall use the Command Line tool.
 - Edit the Dockerfile with command ```vim Dockerfile```
 - Inside the vim editor press "I" on the keyboard to go inside the “insert” mode. Type the instructions:
 
-```# get the Alpine baseimage
+```
+# get the Alpine baseimage
 FROM alpine:latest
 # add HelloWorld class to the image with the same name
 ADD HelloWorld.class HelloWorld.class
