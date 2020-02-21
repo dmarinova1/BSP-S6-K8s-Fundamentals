@@ -126,6 +126,7 @@ RUN apk --update add openjdk8-jre
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
 ```
 Press Esc and type ```:wq!``` to exit
+
 To see contents of Dockerfile type ```cat Dockerfile```
 ![Dockerfile](dockerfile.png)
 - Build/Create the image using command with a dot at the end (if inside the repository of the Dockerfile): 
