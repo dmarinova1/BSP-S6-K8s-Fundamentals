@@ -108,7 +108,7 @@ A Dockerfile defines a docker image.
 We shall use the Command Line tool.
 
 - Open Terminal. 
-- Go to your Desktop. 
+- Go to your Desktop with command ```cd Desktop```
 - Create a folder called “DockerFiles” with the command ```mkdir DockerFiles```
 - Go inside the folder with command ```cd DockerFiles ```
 - Create a Dockerfile with command ```touch Dockerfile ```
