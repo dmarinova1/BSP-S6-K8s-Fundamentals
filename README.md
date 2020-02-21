@@ -190,7 +190,9 @@ To see contents of Dockerfile type ```cat Dockerfile```
 ## Docker registries
 - stores Docker images; 
 
-e.g.  ```Docker Hub``` is a public registry that anyone can use and Docker looks for images on Docker Hub by default; the commands ```docker pull``` or ```docker run``` pull the required images from the configured registry; the command ```docker push``` pushes the image to our configured registry
+For instannce, ```Docker Hub``` is a public registry that anyone can use and Docker looks for images on Docker Hub by default; 
+the commands ```docker pull``` or ```docker run``` pull the required images from the configured registry; 
+the command ```docker push``` pushes the image to our configured registry
 
 ## Docker objects: 
 - can be images, containers, networks, plugins, volumes, etc.
@@ -202,7 +204,9 @@ e.g.  ```Docker Hub``` is a public registry that anyone can use and Docker looks
 - all these make the images lightweight, small and fast when compared to other virtualisation technologies
 
 ## Namespaces 
-- a technology providing isolated workspace called the container; when running a container, Docker creates a set of namespaces for that container that provide a layer of isolation; each aspect of a container runs in a separate namespace and its access is limited to that namespace;
+- a technology providing isolated workspace called the container; 
+- when running a container, Docker creates a set of namespaces for that container that provide a layer of isolation; 
+- each aspect of a container runs in a separate namespace and its access is limited to that namespace;
 	
 	The Docker Engine uses the following namespaces:
 	- the ```pid``` namespace: process isolation (PID: Process ID)
