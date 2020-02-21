@@ -189,7 +189,8 @@ To see contents of Dockerfile type ```cat Dockerfile```
 
 ## Docker registries
 - stores Docker images; 
-	e.g.  ```Docker Hub``` is a public registry that anyone can use and Docker looks for images on Docker Hub by default; the commands ```docker pull``` or ```docker run``` pull the required images from the configured registry; the command ```docker push``` pushes the image to our configured registry
+
+e.g.  ```Docker Hub``` is a public registry that anyone can use and Docker looks for images on Docker Hub by default; the commands ```docker pull``` or ```docker run``` pull the required images from the configured registry; the command ```docker push``` pushes the image to our configured registry
 
 ## Docker objects: 
 - can be images, containers, networks, plugins, volumes, etc.
@@ -222,8 +223,11 @@ To see contents of Dockerfile type ```cat Dockerfile```
 ## Instructions used in tutorial for Dockerfile
 
 ```FROM``` sets the Base Image for subsequent instructions.
+
 ```ADD``` copies new files, directories or remote file to container.
+
 ```RUN``` execute any commands in a new layer on top of the current image and commit the results.
+
 ```ENTRYPOINT``` configures a container that will run as an executable.
 
 
