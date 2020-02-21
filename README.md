@@ -203,7 +203,8 @@ e.g.  ```Docker Hub``` is a public registry that anyone can use and Docker looks
 
 ## Namespaces 
 - a technology providing isolated workspace called the container; when running a container, Docker creates a set of namespaces for that container that provide a layer of isolation; each aspect of a container runs in a separate namespace and its access is limited to that namespace;
-	  ### Docker Engine uses the following namespaces:
+	
+	The Docker Engine uses the following namespaces:
 	- the ```pid``` namespace: process isolation (PID: Process ID)
 	- the ```net``` namespace: managing network interfaces (NET: Networking)
 	- the ```ipc``` namespace: managing access to IPC resources (IPC: InterProcess Communication)
