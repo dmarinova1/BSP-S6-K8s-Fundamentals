@@ -249,7 +249,8 @@ the command ```docker push``` pushes the image to our configured registry
 ## Services 
 -> a service functions as a proxy to its underlying pods and requests can be load balanced across replicated pods.
 
-## System Components = key components managing a Kubernetes cluster include: 
+## System Components
+-> key components managing a Kubernetes cluster include: 
 - the API Server 
 - Kubelet
 - etcd. 
