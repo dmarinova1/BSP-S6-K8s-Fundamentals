@@ -253,8 +253,7 @@ the command ```docker push``` pushes the image to our configured registry
 -> key components managing a Kubernetes cluster include: 
 - the API Server 
 - Kubelet
-- etcd. 
-Note: Any of these components are potential targets for attacks. 
+- etcd.  
 
 # REFERENCES:
 
