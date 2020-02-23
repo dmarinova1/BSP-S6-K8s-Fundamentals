@@ -235,11 +235,30 @@ the command ```docker push``` pushes the image to our configured registry
 
 ```ENTRYPOINT``` configures a container that will run as an executable.
 
+# KUBERNETES 
 
+## Master Node 
+-> the server which manages the Kubernetes worker node cluster and the deployment of pods on nodes.
 
+## Worker Node (also known as slaves or minions) 
+-> these servers typically run the application containers and other Kubernetes components such as agents and proxies.
+
+## Pods
+-> the unit of deployment and addressability in Kubernetes. A pod has its own IP address and can contain one or more containers (typically one).
+
+## Services 
+-> a service functions as a proxy to its underlying pods and requests can be load balanced across replicated pods.
+
+## System Components = key components managing a Kubernetes cluster include: 
+- the API Server 
+- Kubelet
+- etcd. 
+Note: Any of these components are potential targets for attacks. 
 
 # REFERENCES:
 
 1) Docker docs. Docker Overview. URL: https://docs.docker.com/engine/docker-overview/ 
 
 2) Docker docs. Orientation and setup. URL: https://docs.docker.com/get-started/ 
+
+3) Kubernetes 101. URL: https://neuvector.com/container-security/kubernetes-security-guide/
