@@ -236,6 +236,7 @@ the command ```docker push``` pushes the image to our configured registry
 ```ENTRYPOINT``` configures a container that will run as an executable.
 
 # KUBERNETES 
+-> an open source orchestrator for deploying and managing microservices or containerized applications at scale
 
 ## Master Node 
 -> the server which manages the Kubernetes worker node cluster and the deployment of pods on nodes.
@@ -262,3 +263,7 @@ the command ```docker push``` pushes the image to our configured registry
 2) Docker docs. Orientation and setup. URL: https://docs.docker.com/get-started/ 
 
 3) Kubernetes 101. URL: https://neuvector.com/container-security/kubernetes-security-guide/
+
+4) What is Kubernetes? Docs. URL: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/ 
+
+5) Kubernetes components. Docs. URL: https://kubernetes.io/docs/concepts/overview/components/
