@@ -100,7 +100,10 @@ the command ```docker push``` pushes the image to our configured registry
 -> these servers typically run the application containers and other Kubernetes components such as agents and proxies.
 
 ## Pods
--> the unit of deployment and addressability in Kubernetes. A pod has its own IP address and can contain one or more containers (typically one).
+-> the unit of deployment and addressability in Kubernetes. A pod has its own IP address and can contain one or more containers (typically one). A Pod represents processes running on the cluster. 
+
+## Cluster
+-> a set of worker machines/nodes that run containerized applications. Every cluster has at least one worker node.
 
 ## Services 
 -> a service functions as a proxy to its underlying pods and requests can be load balanced across replicated pods.
