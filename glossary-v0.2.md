@@ -119,9 +119,17 @@ the command ```docker push``` pushes the image to our configured registry
 -> key components managing a Kubernetes cluster include: 
 - the API Server = known as ```kube-apiserver```; a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane. The main implementation of a Kubernetes API server is ```kube-apiserver```, designed to scale horizontally by deploying more instances. K8s API is an application that serves Kubernetes functionality through a RESTful interface and stores the state of the cluster. Kubernetes resources are all stored as API objects, and modified via RESTful calls to the API. The API allows configuration to be managed in a declarative way. Users can interact with the Kubernetes API directly, or via tools like kubectl. 
 
-- kubelet = an agent that runs on each node in the cluster. It makes sure that containers are running in a pod
-- etcd = consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data
-- Scheduler = control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on; scheduling decisions based on factors include: individual and collective resource requirements, hardware/software/policy constraints, affinity and anti-affinity specifications, data locality, inter-workload interference and deadlines.
+- ```kubelet``` = an agent that runs on each node in the cluster. It makes sure that containers are running in a pod
+- ```etcd``` = consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data
+- ```kube-scheduler``` = control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on; 
+- ```kube-controller-manager``` = runs controller processes; each controller is a separate process, but to reduce complexity, they are all compiled into a single binary and run in a single process; 
+
+-> controllers include: 
+1. **Node Controller** (responsible for noticing and responding when nodes go down); 
+1. **Replication Controller** (Responsible for maintaining the correct number of pods for every replication controller object in the system); 
+1. **Endpoints Controller** (populates the Endpoints object (that is, joins Services & Pods)); 
+1. **Service Account & Token Controllers** (create default accounts and API access tokens for new namespaces); 
+
 
 ## Namespaces
 An abstraction used by Kubernetes to support multiple virtual clusters on the same physical cluster. Namespaces are intended for use in environments with many users spread across multiple teams, or projects. Names of resources need to be unique within a namespace, but not across namespaces. Namespaces can not be nested inside one another and each Kubernetes resource can only be in one namespace. Namespaces are a way to divide cluster resources between multiple users.
