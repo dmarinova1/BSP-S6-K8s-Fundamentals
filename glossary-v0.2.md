@@ -118,9 +118,9 @@ the command ```docker push``` pushes the image to our configured registry
 Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. Namespaces are intended for use in environments with many users spread across multiple teams, or projects.
 -> Kubernetes starts with three initial namespaces:
 
-```default``` = default namespace for objects with no other namespace
-```kube-system``` = namespace for objects created by the Kubernetes system
-```kube-public``` = namespace created automatically, readable by all users (including those not authenticated); mostly reserved for cluster usage, in case that some resources should be visible and readable publicly throughout the whole cluster.
+- ```default``` = default namespace for objects with no other namespace
+- ```kube-system``` = namespace for objects created by the Kubernetes system
+- ```kube-public``` = namespace created automatically, readable by all users (including those not authenticated); mostly reserved for cluster usage, in case that some resources should be visible and readable publicly throughout the whole cluster.
 
 # REFERENCES:
 
