@@ -115,7 +115,8 @@ the command ```docker push``` pushes the image to our configured registry
 - etcd.  
 
 ## Namespaces
-Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. Namespaces are intended for use in environments with many users spread across multiple teams, or projects.
+Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. Namespaces are intended for use in environments with many users spread across multiple teams, or projects. Namespaces can not be nested inside one another and each Kubernetes resource can only be in one namespace. Namespaces are a way to divide cluster resources between multiple users.
+
 -> Kubernetes starts with three initial namespaces:
 
 - ```default``` = default namespace for objects with no other namespace
