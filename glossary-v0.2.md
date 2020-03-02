@@ -1,4 +1,4 @@
-# GLOSSARY v0.1
+# GLOSSARY
 
 ## Docker:
 - an open platform, written in Go language, for sharing, shipping, and running apps;
