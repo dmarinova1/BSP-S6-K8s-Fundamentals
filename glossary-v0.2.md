@@ -97,7 +97,11 @@ the command ```docker push``` pushes the image to our configured registry
 -> the server which manages the Kubernetes worker node cluster and the deployment of pods on nodes.
 
 ## Worker Node (also known as slaves or minions) 
--> these servers typically run the application containers and other Kubernetes components such as agents and proxies.
+
+- a node is a worker machine in Kubernetes; 
+- it may be a VM or physical machine, depending on the cluster; 
+- it has local daemons or services necessary to run Pods and is managed by the control plane; 
+- the daemons on a node include kubelet, kube-proxy, and a container runtime implementing the CRI such as Docker;
 
 ## Pods
 -> the unit of deployment and addressability in Kubernetes. A pod has its own IP address and can contain one or more containers (typically one). A Pod represents processes running on the cluster. 
@@ -108,20 +112,28 @@ the command ```docker push``` pushes the image to our configured registry
 ## Services 
 -> a service functions as a proxy to its underlying pods and requests can be load balanced across replicated pods.
 
+## Volume
+-> a directory containing data, accessible to the containers in a pod; the volume lives as long as the pod that encloses it. Consequently, a volume outlives any containers that run within the pod, and data is preserved across container restarts.
+
 ## System Components
 -> key components managing a Kubernetes cluster include: 
-- the API Server 
-- Kubelet
-- etcd.  
+- the API Server = known as ```kube-apiserver```; a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane. The main implementation of a Kubernetes API server is ```kube-apiserver```, designed to scale horizontally by deploying more instances. K8s API is an application that serves Kubernetes functionality through a RESTful interface and stores the state of the cluster. Kubernetes resources are all stored as API objects, and modified via RESTful calls to the API. The API allows configuration to be managed in a declarative way. Users can interact with the Kubernetes API directly, or via tools like kubectl. 
+
+- kubelet = an agent that runs on each node in the cluster. It makes sure that containers are running in a pod
+- etcd = consistent and highly-available key value store used as Kubernetes’ backing store for all cluster data
+- Scheduler = control plane component that watches for newly created pods with no assigned node, and selects a node for them to run on; scheduling decisions based on factors include: individual and collective resource requirements, hardware/software/policy constraints, affinity and anti-affinity specifications, data locality, inter-workload interference and deadlines.
 
 ## Namespaces
-Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. Namespaces are intended for use in environments with many users spread across multiple teams, or projects. Namespaces can not be nested inside one another and each Kubernetes resource can only be in one namespace. Namespaces are a way to divide cluster resources between multiple users.
+An abstraction used by Kubernetes to support multiple virtual clusters on the same physical cluster. Namespaces are intended for use in environments with many users spread across multiple teams, or projects. Names of resources need to be unique within a namespace, but not across namespaces. Namespaces can not be nested inside one another and each Kubernetes resource can only be in one namespace. Namespaces are a way to divide cluster resources between multiple users.
 
 -> Kubernetes starts with three initial namespaces:
 
 - ```default``` = default namespace for objects with no other namespace
 - ```kube-system``` = namespace for objects created by the Kubernetes system
 - ```kube-public``` = namespace created automatically, readable by all users (including those not authenticated); mostly reserved for cluster usage, in case that some resources should be visible and readable publicly throughout the whole cluster.
+
+## Minikube
+-> a tool for running Kubernetes locally; it runs a single-node cluster inside a VM on the computer;
 
 # REFERENCES:
 
