@@ -65,9 +65,11 @@ docker tag ID-image dmarinova1/hwpython:newest
 #Push your image to the repository you created
 docker push dmarinova1/hwpython
 
-# Run Hello World Python container
-#run a command in a container, publishing the container's port(s) to the host with the option -p port# followed by the IMAGE
-docker run -p 3333:3333 hwpython:newest
+# Running the image inside the Hello World Python container
+#run a command in a container, publishing the container's port(s) to the host with the option ```-p```
+
+#the code uses port 3333, and it is mapped to the local port 3333
+```docker run -p 3333:3333 hwpython:newest```
 
 #the Terminal app displays:
 > Running on http://0.0.0.0:3333/
