@@ -71,3 +71,11 @@ This automatically opens up a browser window using the local IP address that ser
 ```minikube service hwpython --url```
 
 we can copy the address and go to a web browser to see the page output. 
+
+## If we want to delete the web server: 
+
+```kubectl delete server hwpython ```
+
+- check if deletion is completed:
+
+```kubectl get services```
