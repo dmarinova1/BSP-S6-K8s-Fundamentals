@@ -69,6 +69,7 @@ On Minikube, the LoadBalancer type makes the Service accessible through the ```m
 - **LoadBalancer**: Exposes the Service externally using a cloud provider’s load balancer. NodePort and ClusterIP Services, to which the external load balancer routes, are automatically created.
 - **ExternalName**: Maps the Service to the contents of the externalName field, by returning a CNAME record with its value. No proxying of any kind is set up.
 
+Ref: [K8s Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
 ## View the kubectl configuration:
 
