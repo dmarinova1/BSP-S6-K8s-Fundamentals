@@ -72,10 +72,6 @@ This automatically opens up a browser window using the local IP address that ser
 
 we can copy the address and go to a web browser to see the page output. 
 
-## If we want to delete the web server: 
+## If we want to remove the deployment which will also remove the pod that it was managing:
 
-```kubectl delete server hwpython ```
-
-- check if deletion is completed:
-
-```kubectl get services```
+`kubectl delete deployment hwpython`
