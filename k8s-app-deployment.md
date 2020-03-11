@@ -40,27 +40,27 @@ The Pod runs a Container based on our ```hwpython:newest``` Docker image. Set th
 
 ```kubectl run hwpython --image=hwpython:newest --port=3333 --image-pull-policy=Never```
 
-Deployment: 
+## Deployment: 
 
 ```kubectl get deployments```
 
-View the pod:
+## View the pod:
 
 ```kubectl get pods```
 
-View cluster events:
+## View cluster events:
 
 ```kubectl get events```
 
-View the kubectl configuration:
+## View the kubectl configuration:
 
 ```kubectl config view```
 
-View the Service:
+## View the Service:
 
 ```kubectl get service```
 
-the Service accessible through the minikube service command:
+## the Service accessible through the minikube service command:
 
 ```minikube service hwpython```
 
