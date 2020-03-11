@@ -65,3 +65,9 @@ The Pod runs a Container based on our ```hwpython:newest``` Docker image. Set th
 ```minikube service hwpython```
 
 This automatically opens up a browser window using the local IP address that serves our app and shows the “Hello World” message.
+
+*or* using the command to obtain access to the services which prints out the IP address of Minikube VM and the port the service is mapped to:
+
+```minikube service hwpython --url```
+
+we can copy the address and go to a web browser to see the page output. 
