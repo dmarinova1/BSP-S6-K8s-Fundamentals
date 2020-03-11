@@ -52,6 +52,24 @@ The Pod runs a Container based on our ```hwpython:newest``` Docker image. Set th
 
 ```kubectl get events```
 
+## Create a Service:
+By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. 
+To access the hwpython Container Deployment from outside the Kubernetes virtual network, we expose the Pod as a Service:
+
+```kubectl expose deployment hwpython --type=LoadBalancer --port=3333```
+
+The ```--type=LoadBalancer``` flag indicates that we want to expose our service outside of the cluster.
+On Minikube, the LoadBalancer type makes the Service accessible through the ```minikube service``` command.
+
+**Note**: Kubernetes ServiceTypes allow us to specify what kind of Service we want. The default is ClusterIP.
+
+-> Type values and their behaviors are:
+- **ClusterIP**: Exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within the cluster. This is the default ServiceType.
+- **NodePort**: Exposes the Service on each Node’s IP at a static port (the NodePort). A ClusterIP Service, to which the NodePort Service routes, is automatically created. We'll be able to contact the NodePort Service, from outside the cluster, by requesting NodeIP:NodePort.
+- **LoadBalancer**: Exposes the Service externally using a cloud provider’s load balancer. NodePort and ClusterIP Services, to which the external load balancer routes, are automatically created.
+- **ExternalName**: Maps the Service to the contents of the externalName field, by returning a CNAME record with its value. No proxying of any kind is set up.
+
+
 ## View the kubectl configuration:
 
 ```kubectl config view```
@@ -72,6 +90,14 @@ This automatically opens up a browser window using the local IP address that ser
 
 we can copy the address and go to a web browser to see the page output. 
 
+## If we want to delete the hwpython Service:
+
+```kubectl delete services hwpython```
+
 ## If we want to remove the deployment which will also remove the pod that it was managing:
 
 `kubectl delete deployment hwpython`
+
+## Stop the local Minikube cluster:
+
+```minikube stop```
