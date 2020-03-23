@@ -99,6 +99,10 @@ we can copy the address and go to a web browser to see the page output.
 
 `kubectl delete deployment hwpython`
 
+## Get the IP of your `minikube` host:
+
+`minikube ip`
+
 ## Stop the local Minikube cluster:
 
 ```minikube stop```
