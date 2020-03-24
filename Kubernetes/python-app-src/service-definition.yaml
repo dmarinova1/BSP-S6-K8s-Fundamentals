@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-python-service
+spec:
+  selector:
+    app: hwpython
+  type: LoadBalancer
+  ports:
+    - name: hello-world-port
+      port: 3333
+      targetPort: 
+
+
+        
