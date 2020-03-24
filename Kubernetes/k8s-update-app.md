@@ -1,5 +1,7 @@
 An experiment of the project is to modify the message of the Python application from "Hello World" to "Hello Luxembourg" and see the minimal steps necessary to update the app on the K8s cluster.
 
+The `service-definition.yaml` and `deployment-definition.yaml` files can be found inside the folder `python-app-src` alongside the python application files `helloworld.py` and `HelloWorld.class` and the `Dockerfile`.
+
 ## Change the message inside the `helloworld.py` file.
 
 "Hello World!" to "Hello Luxembourg!"
