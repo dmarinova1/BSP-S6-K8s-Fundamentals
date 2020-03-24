@@ -50,11 +50,11 @@ Note: Now the Minikube VM can run the docker image we have built.
 
 `kubectl get deployments`
 
-## Delete the deployment-definition.yaml file:
+## Delete `deployment-definition.yaml` file:
 
 `kubectl delete deployment deployment-definition.yaml`
 
-## Redeploy the yaml file:
+## Redeploy the same `yaml` file:
 
 `kubectl create -f deployment-definition.yaml`
 
