@@ -43,14 +43,15 @@ Note: Later, when we no longer wish to use the Minikube host, we can undo this c
 `docker ps`
 
 The ps command provides several columns of information:
-
-`Container ID` – a unique alphanumeric number for each container
-`Image` – The base operating system image the container is based on
-`Command` – The command that launched the container
-`Created` – How long ago the container was created
-`Status` – Uptime or downtime
-`Ports` – Specifies any ports forwarded to the container for networking
-`Name` – A memorable name assigned by the Docker software
+Column | Definition 
+--- | --- 
+`Container ID` | a unique alphanumeric number for each container
+`Image` | The base operating system image the container is based on
+`Command` | The command that launched the container
+`Created` | How long ago the container was created
+`Status` | Uptime or downtime
+`Ports` | Specifies any ports forwarded to the container for networking
+`Name` | A memorable name assigned by the Docker software
 
 -> list latest created container
 `docker ps –l`
