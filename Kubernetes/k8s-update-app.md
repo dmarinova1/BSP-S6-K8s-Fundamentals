@@ -16,7 +16,7 @@ The `service-definition.yaml` and `deployment-definition.yaml` files can be foun
 
 `docker images`
 
-## Push the modified image to the Docker Hub repository
+## (Optional step) Push the modified image to the Docker Hub repository
 
 `docker push username/app-name`
 
