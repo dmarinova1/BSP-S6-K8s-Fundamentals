@@ -26,11 +26,11 @@ The `service-definition.yaml` and `deployment-definition.yaml` files can be foun
 
 `minikube start`
 
-## Set the Minikube context to determine which cluster kubectl is interacting with:
+## Set the Minikube context:
 
 `kubectl config use-context minikube`
 
-## Since we are using Minikube, we build the image using the same Docker host as the Minikube VM. Make sure we are using the Minikube Docker daemon, by running the following:
+## Use the Minikube Docker daemon:
 
 `eval $(minikube docker-env)`
 
@@ -38,7 +38,7 @@ Note: Later, when we no longer wish to use the Minikube host, we can undo this c
 
 `eval $(minikube docker-env -u).`
 
-## List all running Docker containers
+## List all running Docker containers:
 
 `docker ps`
 
