@@ -6,8 +6,8 @@ This file contains useful k8s deployment commands. [Reference 1.](https://kubern
 $ create -f FILENAME
 kubectl create -f deployment-definition.yaml
 ```
-## Apply 
--> Create a deployment based on the YAML configuration file, i.e 'apply' a configuration to a resource by filename or stdin. JSON and YAML formats are accepted.
+## Create a deployment based on the YAML configuration file
+-> apply a configuration to a resource by filename or stdin. JSON and YAML formats are accepted.
 ```
 $ apply (-f FILENAME | -k DIRECTORY)
 kubectl apply -f deployment-definition.yaml
