@@ -38,6 +38,13 @@ Note: Later, when we no longer wish to use the Minikube host, we can undo this c
 
 `eval $(minikube docker-env -u).`
 
+## List all running Docker containers
+
+`docker ps`
+
+-> list latest created container
+`docker ps –l`
+
 ## Build the Docker image, using the Minikube Docker daemon (mind the dot at the end):
 
 `docker build -t hwpython:newest .`
