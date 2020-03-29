@@ -77,5 +77,5 @@ kubectl autoscale deployment hello-world-deployment --min=2 --max=10
 ```
 $ delete ([-f FILENAME] | [-k DIRECTORY] | TYPE [(NAME | -l label | --all)])
 
-kubectl delete deployment deployment-definition.yaml
+kubectl delete -f deployment-definition.yaml
 ```
