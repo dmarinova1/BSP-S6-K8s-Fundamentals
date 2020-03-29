@@ -8,8 +8,8 @@ spec:
   type: LoadBalancer
   ports:
     - name: hello-world-port
-      port: 3333
-      targetPort: 
+      port: 80
+      targetPort: 3333
 
 
         

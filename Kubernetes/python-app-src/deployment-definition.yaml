@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hwpython
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hwpython
