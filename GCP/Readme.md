@@ -118,3 +118,60 @@ gunicorn==20.0.4
 ```gcloud app browse```
 
 #the URL returns the string "Hello Luxembourg"
+
+================================================
+
+# Deploy on GCP
+
+## open the GCP console: https://console.cloud.google.com
+
+## list the content on the repository (newly created 'python' folder should be present):
+
+```ls```
+
+## navigate to the 'python' project folder:
+
+```cd python```
+
+## Create a Deployment: 
+
+```kubectl create -f deployment.yaml```
+
+## Verify deployments:
+
+```kubectl get deploymentss```
+
+## Create a service: 
+
+```kubectl create -f service.yaml```
+
+## Verify deployments:
+
+```kubectl get services```
+
+## View the pod:
+
+```kubectl get pods```
+
+## Create a Service:
+By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. 
+To access the hwpython Container Deployment from outside the Kubernetes virtual network, we expose the Pod as a Service:
+
+```kubectl expose deployment hello-lux-deployment```
+
+## View cluster events:
+
+```kubectl get events```
+
+## the Service 'hello-lux-service3' is exposed at EXTERNAL IP address which we copy and paste to the browser in a new tab to access it
+
+This shows the “Hello Luxembourg” message on the page.
+
+## If we want to delete the 'hello-lux-service3' Service:
+
+```kubectl delete service hello-lux-service3```
+
+## If we want to remove the deployment which will also remove the pod that it was managing:
+
+`kubectl delete deployment hello-lux-deployment`
+
