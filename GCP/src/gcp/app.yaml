@@ -1,0 +1,8 @@
+runtime: python
+#flexible env; allows to dynamically scale and meet customers' demands
+env: flex 
+#specify entrypoint for the app and deploy the web server for us 
+entrypoint: gunicorn -b :$PORT hellolux:app
+
+runtime_config:
+    python_version: 3

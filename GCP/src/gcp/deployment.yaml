@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-lux-deployment
+  labels:
+    app: hellolux2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloluxembourg
+  template:
+    metadata:
+      labels:
+        app: helloluxembourg
+    spec:
+      containers:
+      - name: hello-lux-container1
+        image: gcr.io/my-test-project-240511/hellolux:latest
+        ports:
+        - containerPort: 3333
+
+

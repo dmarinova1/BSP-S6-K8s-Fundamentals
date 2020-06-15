@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-lux-service3
+spec:
+  selector:
+    app: helloluxembourg
+  type: LoadBalancer
+  ports:
+    - name: hello-lux-port
+      port: 80
+      targetPort: 3333
+
+
+        

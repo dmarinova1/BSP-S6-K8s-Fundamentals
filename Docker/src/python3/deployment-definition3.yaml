@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-lux-deployment3
+  labels:
+    app: hellogermany3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellogermany
+  template:
+    metadata:
+      labels:
+        app: hellogermany
+    spec:
+      containers:
+      - name: hello-ger-container1
+        image: hellogermany:newest
+        ports:
+        - containerPort: 3334
+
+

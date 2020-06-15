@@ -6,9 +6,9 @@ api = Api(app)
 
 class Greeting (Resource):
     def get(self):
-        return 'Hello World!'
+        return 'Hello Germany!'
 
 api.add_resource(Greeting, '/') # Route_1
 
 if __name__ == '__main__':
-    app.run('0.0.0.0','3333')
+    app.run('0.0.0.0','3334')

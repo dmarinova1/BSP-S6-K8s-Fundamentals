@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-lux-deployment
+  labels:
+    app: hellolux2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helloluxembourg
+  template:
+    metadata:
+      labels:
+        app: helloluxembourg
+    spec:
+      containers:
+      - name: hello-lux-container1
+        image: helloluxembourg:newest
+        ports:
+        - containerPort: 3333
+
+
