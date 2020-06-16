@@ -105,8 +105,12 @@ gunicorn==20.0.4
 ```gcloud auth configure-docker```
 
 #push the Docker image to the cloud container registry
-```docker push gcr.io/${PROJECT-ID}/hellolux:latest```
-
+```docker push [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]```
+where: 
+- [HOSTNAME] is listed under Location in the console. It's one of four options: gcr.io, us.gcr.io, eu.gcr.io, asia.gcr.io
+- [PROJECT-ID] is your Google Cloud Console project ID
+- [IMAGE] is the image's name in Container Registry
+- [TAG] is the tag applied to the image
 
 #navigate to the location of the folder "python"
 ```cd python```
