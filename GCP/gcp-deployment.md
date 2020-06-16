@@ -101,12 +101,19 @@ gunicorn==20.0.4
 
 #go back to the cloud shell
 
-#list the content on your repository
+#configure the Docker command-line tool to authenticate to Container Registry: 
+```gcloud auth configure-docker```
 
-```ls```
+#push the Docker image to the cloud container registry
+```docker push gcr.io/${PROJECT-ID}/hellolux:latest```
+
 
 #navigate to the location of the folder "python"
 ```cd python```
+
+#list the content on your repository
+
+```ls```
 
 #to deploy the application, run the following command:
 
