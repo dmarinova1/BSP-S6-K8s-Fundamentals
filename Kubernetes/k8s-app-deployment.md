@@ -26,19 +26,22 @@ Note: Later, when we no longer wish to use the Minikube host, we can undo this c
 
 ```eval $(minikube docker-env -u).```
 
-After we have written our application in a filename "helloworld.py" and saved it in a project folder "python", we create our Dockerfile containing commands for our Docker image. 
-Then we build our Docker image, using the Minikube Docker daemon (mind the dot at the end):
+After we have written our application in a filename "hellolux.py" and saved it in a project folder "python", we create our Dockerfile containing commands for our Docker image. Then we build our Docker image, using the Minikube Docker daemon (mind the dot at the end):
 
-```docker build -t hwpython:newest .```
+```docker build -t helloluxembourg:newest .```
 
 Now the Minikube VM can run the docker image we have built.
 
 # Create a Deployment
 
 We can use the ```kubectl run``` command to create a Deployment that manages a Pod. 
-The Pod runs a Container based on our ```hwpython:newest``` Docker image. Set the ```--image-pull-policy``` flag to ```Never``` which means that it will always use the local image, rather than pulling it from our Docker registry.
+The Pod runs a Container based on our ```helloluxembourg:newest``` Docker image. Set the ```--image-pull-policy``` flag to ```Never``` which means that it will always use the local image, rather than pulling it from our Docker registry.
 
-```kubectl run hwpython --image=hwpython:newest --port=3333 --image-pull-policy=Never```
+```kubectl run hello-lux-deployment --image=helloluxembourg:newest --port=3333 --image-pull-policy=Never```
+
+OR issue command to create a Deployment from a YAML file
+
+```kubectl create -f deployment-definition.yaml```
 
 ## Deployment: 
 
@@ -54,14 +57,10 @@ The Pod runs a Container based on our ```hwpython:newest``` Docker image. Set th
 
 ## Create a Service:
 By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. 
-To access the hwpython Container Deployment from outside the Kubernetes virtual network, we expose the Pod as a Service:
 
-```kubectl expose deployment hwpython --type=LoadBalancer --port=3333```
+```kubectl create -f service-definition.yaml```
 
-The ```--type=LoadBalancer``` flag indicates that we want to expose our service outside of the cluster.
-On Minikube, the LoadBalancer type makes the Service accessible through the ```minikube service``` command.
-
-**Note**: Kubernetes ServiceTypes allow us to specify what kind of Service we want. The default is ClusterIP.
+**Note**: Kubernetes ServiceTypes allow us to specify what kind of Service we want. The default is ClusterIP. Inside the service-definition.yaml we have specified a ```--type=LoadBalancer``` flag indicates that we want to expose our service outside of the cluster. On Minikube, the LoadBalancer type makes the Service accessible through the ```minikube service``` command.
 
 -> Type values and their behaviors are:
 - **ClusterIP**: Exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within the cluster. This is the default ServiceType.
@@ -71,33 +70,33 @@ On Minikube, the LoadBalancer type makes the Service accessible through the ```m
 
 Ref: [K8s Services](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-## View the kubectl configuration:
+## (Optional) View the kubectl configuration:
 
 ```kubectl config view```
 
-## View the Service:
+## View the Services:
 
-```kubectl get service```
+```kubectl get services```
 
-## the Service accessible through the minikube service command:
+## the Service is accessible through the minikube service command:
 
-```minikube service hwpython```
+```minikube service hello-lux-service3```
 
-This automatically opens up a browser window using the local IP address that serves our app and shows the “Hello World” message.
+This automatically opens up a browser window using the local IP address that serves our app and shows the “Hello Luxembourg!” message.
 
 *or* using the command to obtain access to the services which prints out the IP address of Minikube VM and the port the service is mapped to:
 
-```minikube service hwpython --url```
+```minikube service hello-lux-service3 --url```
 
 we can copy the address and go to a web browser to see the page output. 
 
-## If we want to delete the hwpython Service:
+## If we want to delete the hello-lux-service3 Service:
 
-```kubectl delete services hwpython```
+```kubectl delete service hello-lux-service3```
 
 ## If we want to remove the deployment which will also remove the pod that it was managing:
 
-`kubectl delete deployment hwpython`
+`kubectl delete deployment hello-lux-deployment`
 
 ## Get the IP of your `minikube` host:
 
