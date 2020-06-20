@@ -119,7 +119,7 @@ where:
 
 ```ls```
 
-#to deploy the application, run the following command:
+#to deploy the application using Google App Engine, run the following command:
 
 ```gcloud app deploy```
 
@@ -132,7 +132,7 @@ where:
 
 ================================================
 
-# Deploy on GCP
+# Deploy on GCP using Google Kubernetes Engine
 
 ## open the GCP console: https://console.cloud.google.com
 
@@ -152,6 +152,10 @@ where:
 
 ```kubectl get deploymentss```
 
+## View the pod:
+
+```kubectl get pods```
+
 ## Create a service: 
 
 ```kubectl create -f service.yaml```
@@ -159,20 +163,6 @@ where:
 ## Verify deployments:
 
 ```kubectl get services```
-
-## View the pod:
-
-```kubectl get pods```
-
-## Create a Service:
-By default, the Pod is only accessible by its internal IP address within the Kubernetes cluster. 
-To access the hwpython Container Deployment from outside the Kubernetes virtual network, we expose the Pod as a Service:
-
-```kubectl expose deployment hello-lux-deployment```
-
-## View cluster events:
-
-```kubectl get events```
 
 ## the Service 'hello-lux-service3' is exposed at EXTERNAL IP address which we copy and paste to the browser in a new tab to access it
 
