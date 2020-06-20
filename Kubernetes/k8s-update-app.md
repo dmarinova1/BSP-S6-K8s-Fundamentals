@@ -2,7 +2,7 @@ An experiment of the project is to modify the message of the Python application 
 
 The `service-definition.yaml` and `deployment-definition.yaml` files can be found inside the folder `python-app-src` alongside the python application files `helloworld.py` and `HelloWorld.class` and the `Dockerfile`.
 
-## Change the message inside the `helloworld.py` file.
+## Change the message inside the `hellolux.py` file.
 
 "Hello World!" to "Hello Luxembourg!"
 
@@ -10,7 +10,7 @@ The `service-definition.yaml` and `deployment-definition.yaml` files can be foun
 
 `docker build -t image-name: tag-name .`
 
-`docker build -t hwpython:newest .`
+`docker build -t helloluxembourg:newest .`
 
 ## Display all Docker images, check if the image hwpython exists and see the IMAGE ID:
 
@@ -20,7 +20,7 @@ The `service-definition.yaml` and `deployment-definition.yaml` files can be foun
 
 `docker push username/app-name`
 
-`docker push dmarinova1/hwpython`
+`docker push dmarinova1/helloluxembourg`
 
 ## Launch Minikube if not already done so
 
@@ -58,7 +58,7 @@ Column | Definition
 
 ## Build the Docker image, using the Minikube Docker daemon (mind the dot at the end):
 
-`docker build -t hwpython:newest .`
+`docker build -t helloluxembourg:newest .`
 
 Note: Now the Minikube VM can run the docker image we have built.
 
@@ -80,4 +80,4 @@ Note: Now the Minikube VM can run the docker image we have built.
 
 ## Access the service to see the new message:
 
-`minikube service hello-world-python-service`
+`minikube service hello-lux-service3`
