@@ -99,12 +99,12 @@ Flask==1.1.1
 gunicorn==20.0.4
 ``` 
 
-#go back to the cloud shell
+# go back to the cloud shell
 
-#configure the Docker command-line tool to authenticate to Container Registry: 
+# configure the Docker command-line tool to authenticate to Container Registry: 
 ```gcloud auth configure-docker```
 
-#push the Docker image to the cloud container registry
+# push the Docker image to the cloud container registry
 ```docker push [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]```
 where: 
 - [HOSTNAME] is listed under Location in the console. It's one of four options: gcr.io, us.gcr.io, eu.gcr.io, asia.gcr.io
@@ -112,20 +112,20 @@ where:
 - [IMAGE] is the image's name in Container Registry
 - [TAG] is the tag applied to the image
 
-#navigate to the location of the folder "python"
+# navigate to the location of the folder "python"
 ```cd python```
 
-#list the content on your repository
+# list the content on your repository
 
 ```ls```
 
-#to deploy the application using Google App Engine, run the following command:
+# to deploy the application using Google App Engine, run the following command:
 
 ```gcloud app deploy```
 
 #it takes several minutes when you deploy for the first time, otherwise for subsequent deployments it is faster
 
-#copy the provided URL where the service has been deployed and paste it in a new browser tab. OR type the command to be displayed the URL or directly opened in the browser:
+# copy the provided URL where the service has been deployed and paste it in a new browser tab. OR type the command to be displayed the URL or directly opened in the browser:
 ```gcloud app browse```
 
 #the URL returns the string "Hello Luxembourg"
@@ -133,6 +133,7 @@ where:
 ================================================
 
 # Deploy on GCP using Google Kubernetes Engine
+#Note that the Docker image must be pushed to the cloud Container Registry
 
 ## open the GCP console: https://console.cloud.google.com
 
